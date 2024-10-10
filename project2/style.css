@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1440px; 
+    background-color: white;
+    margin: auto; /* Auto */
+    overflow: hidden;
+}
+.main-container{
+    display: flex;
+    /* position:absolute; */
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 50px; */
+    /* margin-top: 40px; */
+    height: 85vh;
+}
+nav{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;    
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    /* margin-right :0%;
+    margin-left: 45%;
+     */
+}
+
+nav ul li{
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-weight: 600;
+}
+nav ul li:first-child{
+    color: green;
+}
+nav ul li:hover{
+    color: green;
+}
+
+
+.rightbox{
+    width: 60%;
+
+
+
+}
+.main>img{
+    position:absolute;
+
+}
+.rightbox img{
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    top: -60px;
+    right: -25px;
+    /* display: flex; */
+    /* margin-left:90px;
+    height: 650px;
+    position:absolute; */
+
+    /* width: auto; */
+    /* position:relative; */
+
+}
+
+.green ,.yel{
+    position: absolute;
+    right: 0;
+
+}
+
+.first h1{
+    font-size: 70px;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+.second{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.second p{
+color: #808080;
+    font-size: 18px;
+    /* margin: 20px; */
+}
+.mainphoto img{
+    width: 90%;
+    top:-60px;
+    right: -25px;
+    z-index: -1;
+}
+.bottomang{
+    width: 25px;
+    /* padding-left: 20 px; */
+    left: 49%;
+    position: absolute;
+}
+.button img{
+    padding-left: 100%;
+}
+
+.leftbox{
+    width: 50%;
+    margin-left: 5%;
+}
+.button>button{
+    border: none;
+    background-color: green;
+    /* margin-top: 30px; */
+    padding: 15px 40px;
+    border-radius: 30px;
+    /* margin-left: 0%; */
+    color: white;
+}
+.button:hover{
+    background-color: pink;
+}
+p.butto{
+    font-size: 30px;
+}

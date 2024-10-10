@@ -1,0 +1,28 @@
+.pos{
+    border: 1px solid black;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-radius: 7px;
+}
+#three{
+    position:sticky;
+    top: 10px;
+    /* left: 399px; */
+}
+.container{
+    height: 1000px;
+    border: 2px solid black;
+}
+div.nav1{
+.nav{
+    background-color: rgba(243, 234, 111, 0.511);
+    color: rgb(27, 90, 216);
+    text-align: center;
+    padding-top:5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position:sticky;
+    top:10px;
+}
+}

@@ -1,0 +1,13 @@
+/* div>p{
+    color: red;
+} */
+
+
+ /* sibling selectors  */
+ /* adjersent sibling */
+ div + p{
+    color:#0048ff;
+ }
+div~p{
+    color: rgb(89, 0, 255);
+}

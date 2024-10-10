@@ -1,0 +1,23 @@
+.rijan::before{
+    content: "Warning!!";
+    color: red;
+}
+.rijan::after{
+    content: "stay safe";
+    color:blue;
+}
+.quote::after{
+    content:"-Anuj";
+    color:red;
+}
+
+.quote:hover{
+    color:aqua;
+    content: "abee chall reee";
+    background-color: yellow;
+}
+
+input[type=Email]:focus{
+    color: white;
+    background-color: red;
+}

@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.flexitem{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+
+
+}
+
+h2{
+    text-align: center;
+}
+body{
+    background-color: gray;
+}
+@media (max-width:768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .flexitem{
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 50%;
+    text-align: center;
+    }
+}

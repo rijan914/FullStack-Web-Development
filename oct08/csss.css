@@ -1,0 +1,30 @@
+.container{
+    border: 5px solid blue;
+    margin: 30px 30px 30px 30px;
+    border-radius: 2px;
+    padding: 0 0 3px 25px;
+    width: 50%;
+    background-color: #0ABDE3;
+
+} 
+li{
+    margin-left: 30px;
+    padding-top: 12px;
+    list-style-type:lower-alpha;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container:hover{
+    
+    background-color: white;
+    border-color: yellow;
+    border-radius: 2px; 
+    
+
+}
+
+p{
+    padding-left: 30px;
+    color: darkblue;
+    font-size: 20px;
+}

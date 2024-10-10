@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrapa5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    </head>
+<body>
+    <div>
+        <form action="">
+            <label class="imp-label" for="Email">Email:</label>
+            <input class="email" type="email" name="Email" placeholder="Email">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password">
+            <button class="btn-primary" data-tooltip="Tooltip" type="submit">
+                Submit
+            </button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    <style>
+        /* pseudo selectors */
+        /*
+        .imp-label:hover:before {
+            content: 'Netflix';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: red;
+        } */
+        .imp-label:hover:after {
+            content: 'Netflix';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: red;
+        }
+
+        .email:hover {
+            background-color: aqua;
+            padding: 5px;
+        }
+/*
+        .btn-primary {
+            background-color: rgb(93, 93, 196);
+            color: white;
+            padding: 5px 20px 5px 20px;
+            border: 2px white solid;
+            border-radius: 5px;
+            font-size: 12px;
+
+
+        }
+
+        .btn-primary:hover {
+            background-color: white;
+            color: black;
+            border: solid 3px #383CC1;
+
+        }
+*/
+
+        <button class="btn btn-warning" data-tooltip="Tooltip" type="submit">Submit 
+        </button>
+
+        * {
+            background-color: rgba(230, 210, 236, 0.778);
+        }
+    </style>
+
+</body>
+
+</html>

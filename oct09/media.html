@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+
+        }
+
+        .box {
+            height: 70px;
+            width: 70px;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: center;
+        }
+
+        @media(min-width:100px)and (max-width:500px) {
+            body {
+                background-color: yellow;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    </style>
+    <title>Media Query</title>
+</head>
+
+<body>
+    <div class="box">One</div>
+    <div class="box">Two</div>
+    <div class="box">Three</div>
+    <div class="box">Four</div>
+</body>
+
+</html>
