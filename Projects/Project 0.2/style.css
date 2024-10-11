@@ -5,7 +5,6 @@
 
 }
 body{
-    padding:0px 100px;
     background-color: #000000;
     color: white;
 
@@ -16,7 +15,7 @@ body{
     padding-top: 10px;
 }
 .navbar{
-    margin:0px 50px;
+    margin:0px 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -64,11 +63,11 @@ ul.list li{
 }
 /* hero section */
 .hero{
-    margin-top: 10px;
+    margin-top: 08px;
     background-image: url('./assets/bg.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-size:cover;
+    /* background-position: center; */
+    height:120vh;
     display: flex;
     flex-direction: column;
 
@@ -77,14 +76,16 @@ ul.list li{
 }
 .hero-heading{
     width: 60%;
-    font-size: 80px;
+    font-family: sans-serif;
+    font-size: 85px;
     color: white;
     text-align: center;
-    padding-top: 130px;
+    padding-top: 180px;
 }
 .hero p{
     font-size: 28px;
     margin-bottom: 45px;
+    font-family:sans-serif
 }
 .hero button{
     background-color: #b90ec5;
@@ -93,4 +94,5 @@ ul.list li{
     border: none;
     border-radius: 08px;
     font-size: 30px;
+    margin-top: 20px;
 }
