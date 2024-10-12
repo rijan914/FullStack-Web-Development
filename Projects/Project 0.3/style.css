@@ -1,0 +1,80 @@
+*{
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 0 100px;
+    background-color:#ffffff
+
+}
+
+.navbar-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top:30px;
+    /* justify-content: space-evenly; */
+}
+.navbar-container div img{
+    height: 45px;
+
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin-left: 150px;
+    }
+    .list li{
+        font-family:'Orbiton';
+
+        margin-right: 40px;
+        font-size: 25px;
+
+    }
+.list li:first-child{
+    font-weight: bold;
+}
+.button-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right:30px;
+}
+.search-icon{
+    margin-right: 30px;
+}
+.nav-button{
+    display: flex;
+    border:2px solid black;
+    border-radius: 12px;
+    font-size: 25px;
+    padding:08px 50px;
+    background: transparent;
+}
+/* hero */
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    position: relative;
+}
+.square img{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* margin-left: 150px; */
+    /* margin-right: 400px; */
+    margin-top: 160px;
+    height: 300px;
+    width: 300px;
+}
+.hero-container>div{
+margin-left:auto;
+position: relative;
+}
