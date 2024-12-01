@@ -1,0 +1,18 @@
+//arrow_function =>
+
+//normal function
+function sum(a,b){
+let result=a+b;
+return result;
+}
+let answer=sum(1,2)
+// console.log(answer)
+//arrow function
+
+let suma=(a,b)=>{
+    let result=a+b;
+    return result;
+}
+let answes=suma(1,23)
+console.log(answes)
+
