@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART 3</title>
+</head>
+
+<body>
+
+    <h1>Hello Javascript Bootcamp</h1>
+    <ul>
+
+    </ul>
+    <script>
+        //insert inner HTML
+        const list = `
+        <li> Rohit </li>
+        <li> rijan </li>
+        <li> kunal </li>
+        <li> bishal </li>
+     `;
+        const ul = document.querySelector("ul")
+        ul.innerHTML = list;
+
+        //Creating Element on Screen
+        let title = document.createElement("h1")
+        title.className = "title";
+        title.style.fontSize = "25px";
+        title.style.color = "green"
+        title.textContent = "Creating New Element in DOM Day 2"
+        console.log(title);
+        document.body.appendChild(title)
+        //Remove Child => Assignment
+        // document.body.removeChild(title)
+
+        // LOOOP 
+        
+    </script>
+</body>
+
+</html>
