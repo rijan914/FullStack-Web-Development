@@ -13,6 +13,13 @@
     <ul>
 
     </ul>
+    <button onclick="maths()" id="fsjs2">
+        Submit
+    </button>
+    <p id="js">
+        loresm
+    </p>
+
     <script>
         //insert inner HTML
         const list = `
@@ -35,8 +42,31 @@
         //Remove Child => Assignment
         // document.body.removeChild(title)
 
-        // LOOOP 
-        
+        // For LOOP 
+        for (let i = 0; i < 3; i++) {
+            let para = document.createElement("p")
+            para.className = "FSJS";
+            para.style.fontSize = "16px";
+            console.log(para);
+            para.textContent = `${i} is cute for sure`;
+            document.body.appendChild(para)
+        }
+
+
+        //function
+        function maths() {
+            let value = prompt("Solve This 50-30");
+            if (value == 20) {
+                document.getElementById("js").innerText = "Success Redirect";
+                document.getElementById("fsjs2").style.backgroundColor = "Green";
+
+            }
+            else {
+                document.getElementById("js").innerText = "Failure ";
+                document.getElementById("fsjs2").style.backgroundColor = "Red";
+            }
+        }
+
     </script>
 </body>
 
