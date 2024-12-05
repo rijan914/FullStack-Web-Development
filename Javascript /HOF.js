@@ -67,8 +67,8 @@
 // const num1=[1,2,3]
 // const sum = num1.reduce((acc,curr)=>acc+curr,0);
 // console.log(sum);
-//accumulator is cr 
-// current is like who goes to collect the choclate wrappers 
+//accumulator is cr
+// current is like who goes to collect the choclate wrappers
 
 //sort
 /*
@@ -91,12 +91,32 @@
 // let[var1, , var2]=arr5;
 // console.log(var1,var2);
 
-const arr4=[1,2,3,23,4,24]
-let [num1,num2,...rest]= arr4;
-console.log(num1,num2);
-console.log(rest);
+// const arr4=[1,2,3,23,4,24]
+// let [num1,num2,...rest]= arr4;
+// console.log(num1,num2);
+// console.log(rest);
+
+// function sumone(x,y,z){
+//     return x+y+z;
+// }
+// let vari=[5,7,10];
+// console.log(sumone(...vari));
+
+// spread breaking the array  and divide into single chunk of data
+// rest making the array
+
+//rest
+function sum(...args) {
+  //rest op
+  console.log(args);
+  let sum = 0;
+  for (const x of args) {
+    sum = sum + x;
+  }
+  return sum;
+}
+console.log(sum(1, 2, 3, 4, 5, 56, 67, 23));
 
 //find
 //every
 //some
-
