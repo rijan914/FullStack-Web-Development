@@ -110,3 +110,41 @@
   In summary, <code>var</code> is function-scoped and initialized with <code>undefined</code> during the creation phase, while <code>let</code> is block-scoped and not initialized until the execution phase, resulting in a ReferenceError if accessed before declaration.</p>
 </details>
 
+<details>
+  <summary>What is "use strict" in JavaScript?</summary>
+  <p><code>"use strict"</code> is a directive introduced in ECMAScript 5 that enables strict mode in JavaScript. Strict mode is a way to opt in to a restricted variant of JavaScript, which helps catch common coding mistakes and "unsafe" actions, such as defining global variables. It can be applied to an entire script or to individual functions.
+
+  <strong>Benefits of using "use strict":</strong>
+  <ul>
+    <li>Eliminates some JavaScript silent errors by changing them to throw errors.</li>
+    <li>Fixes mistakes that make it difficult for JavaScript engines to perform optimizations, leading to faster code execution.</li>
+    <li>Prohibits some syntax likely to be defined in future versions of ECMAScript.</li>
+  </ul>
+
+  <strong>Examples of strict mode behavior:</strong>
+  <pre><code>
+  // Without strict mode
+  x = 10; // This will not throw an error
+  console.log(x); // Output: 10
+
+  // With strict mode
+  "use strict";
+  y = 20; // This will throw a ReferenceError: y is not defined
+  console.log(y);
+  </code></pre>
+
+  <strong>How to enable strict mode:</strong>
+  <pre><code>
+  // For an entire script
+  "use strict";
+  // Your code here
+
+  // For a specific function
+  function myFunction() {
+    "use strict";
+    // Function code here
+  }
+  </code></pre>
+
+  In summary, <code>"use strict"</code> helps improve the quality of your code by catching common errors and preventing the use of unsafe features.</p>
+</details>
