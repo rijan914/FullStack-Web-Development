@@ -76,3 +76,37 @@
   Primitive data types are immutable, meaning their values cannot be changed once created. Non-primitive data types, on the other hand, are mutable and can have their properties or elements modified. Additionally, primitive data types are stored directly in the memory location, whereas non-primitive data types are stored as references to the memory location.</p>
 </details>
 
+<details>
+  <summary>What are undefined and null in JavaScript?</summary>
+  <p>In JavaScript, <code>undefined</code> and <code>null</code> are two distinct types that represent the absence of a value.
+
+  <strong>undefined:</strong> A variable is automatically assigned the value <code>undefined</code> when it is declared but not initialized. It indicates that a variable has been declared but has not yet been assigned a value. For example:
+  <pre><code>let a;
+  console.log(a); // Output: undefined</code></pre>
+
+  <strong>null:</strong> <code>null</code> is an assignment value that can be explicitly set to indicate that a variable has no value. It is often used to signify that a variable should be empty. For example:
+  <pre><code>let b = null;
+  console.log(b); // Output: null</code></pre>
+
+  While both <code>undefined</code> and <code>null</code> represent the absence of a value, they are used in different contexts and have different meanings. <code>undefined</code> is typically used by the JavaScript engine, whereas <code>null</code> is used by programmers to indicate an intentional absence of value.</p>
+</details>
+
+<details>
+  <summary>What is the difference between var and let in JavaScript?</summary>
+  <p>In JavaScript, <code>var</code> and <code>let</code> are used to declare variables, but they have different behaviors.
+
+  When JavaScript code is executed, it goes through two phases: the creation phase and the execution phase. During the creation phase, the JavaScript engine scans the code and allocates memory for variables and functions. This is known as hoisting.
+
+  <strong>var:</strong> Variables declared with <code>var</code> are hoisted to the top of their containing function or global scope. During the creation phase, they are initialized with <code>undefined</code>. This means that you can reference a <code>var</code> variable before its declaration without causing an error, but it will have the value <code>undefined</code> until the execution phase assigns it a value. For example:
+  <pre><code>console.log(a); // Output: undefined
+  var a = 10;
+  console.log(a); // Output: 10</code></pre>
+
+  <strong>let:</strong> Variables declared with <code>let</code> are also hoisted, but they are not initialized. Instead, they are placed in a "temporal dead zone" (TDZ) from the start of the block until the declaration is encountered. Accessing a <code>let</code> variable before its declaration will result in a ReferenceError. For example:
+  <pre><code>console.log(b); // ReferenceError: Cannot access 'b' before initialization
+  let b = 20;
+  console.log(b); // Output: 20</code></pre>
+
+  In summary, <code>var</code> is function-scoped and initialized with <code>undefined</code> during the creation phase, while <code>let</code> is block-scoped and not initialized until the execution phase, resulting in a ReferenceError if accessed before declaration.</p>
+</details>
+
