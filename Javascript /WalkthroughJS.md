@@ -149,3 +149,90 @@
   In summary, <code>"use strict"</code> helps improve the quality of your code by catching common errors and preventing the use of unsafe features.</p>
 </details>
 
+<details>
+  <summary style="color: blue;">What is the "typeof" operator in JavaScript?</summary>
+  <p style="color: green;">The <code>typeof</code> operator in JavaScript is used to determine the type of a given variable or expression. It returns a string indicating the type of the operand. The <code>typeof</code> operator is useful for debugging and ensuring that variables are of the expected type.
+
+  <strong>Examples of using the "typeof" operator:</strong>
+  <pre><code>
+  console.log(typeof 42); // Output: "number"
+  console.log(typeof 'hello'); // Output: "string"
+  console.log(typeof true); // Output: "boolean"
+  console.log(typeof undefined); // Output: "undefined"
+  console.log(typeof null); // Output: "object" (this is a known quirk in JavaScript)
+  console.log(typeof { name: 'John' }); // Output: "object"
+  console.log(typeof function() {}); // Output: "function"
+  console.log(typeof Symbol('symbol')); // Output: "symbol"
+  console.log(typeof 123n); // Output: "bigint"
+  </code></pre>
+
+  <strong>Special cases:</strong>
+  <ul>
+    <li><code>typeof null</code> returns "object". This is a known issue in JavaScript and is considered a bug, but it has been retained for backward compatibility.</li>
+    <li><code>typeof NaN</code> returns "number". NaN stands for "Not-a-Number", but it is still considered a numeric type.</li>
+  </ul>
+
+  In summary, the <code>typeof</code> operator is a simple and effective way to check the type of a variable or expression in JavaScript.</p>
+</details>
+<details>
+  <summary style="color: blue;">What are template literals in JavaScript?</summary>
+  <p style="color: green;">Template literals are a feature in JavaScript introduced in ES6 (ECMAScript 2015) that allow for easier and more readable string interpolation, multi-line strings, and embedded expressions. Template literals are enclosed by backticks (<code>`</code>) instead of single or double quotes.
+
+  <strong>Key features of template literals:</strong>
+  <ul>
+    <li><strong>String Interpolation:</strong> Template literals allow for embedding expressions within strings using the <code>${expression}</code> syntax. This makes it easier to create dynamic strings. For example:
+    <pre><code>
+    const name = 'John';
+    const greeting = `Hello, ${name}!`;
+    console.log(greeting); // Output: Hello, John!
+    </code></pre></li>
+
+    <li><strong>Multi-line Strings:</strong> Template literals can span multiple lines without the need for concatenation or escape characters. For example:
+    <pre><code>
+    const multiLineString = `This is a string
+    that spans multiple
+    lines.`;
+    console.log(multiLineString);
+    </code></pre></li>
+
+    <li><strong>Embedded Expressions:</strong> You can embed any valid JavaScript expression within a template literal. For example:
+    <pre><code>
+    const a = 5;
+    const b = 10;
+    console.log(`The sum of a and b is ${a + b}.`); // Output: The sum of a and b is 15.
+    </code></pre></li>
+  </ul>
+
+  <strong>Tagged Templates:</strong> Template literals also support tagged templates, which allow you to parse template literals with a function. For example:
+  <pre><code>
+  function tag(strings, ...values) {
+    console.log(strings);
+    console.log(values);
+    return 'Tagged template';
+  }
+  const result = tag`Hello, ${name}!`;
+  console.log(result); // Output: Tagged template
+  </code></pre>
+
+  In summary, template literals provide a more powerful and flexible way to work with strings in JavaScript, making code easier to read and write.</p>
+</details>
+<details>
+  <summary style="color: blue;">What is the type of null in JavaScript?</summary>
+  <p style="color: green;">In JavaScript, the <code>typeof</code> operator returns "object" when applied to <code>null</code>. This is a well-known quirk in JavaScript and is considered a bug in the language, but it has been retained for backward compatibility.
+
+  <strong>Example:</strong>
+  <pre><code>
+  console.log(typeof null); // Output: "object"
+  </code></pre>
+
+  <strong>Explanation:</strong>
+  <p>The reason <code>typeof null</code> returns "object" is due to the way JavaScript was originally designed. In the first implementation of JavaScript, values were represented as a type tag and a value. The type tag for objects was 0. <code>null</code> was represented as the NULL pointer (0x00), which also had the type tag of 0, leading to <code>typeof null</code> returning "object".</p>
+
+  <p>Despite this quirk, <code>null</code> is not an object. It is a primitive value that represents the intentional absence of any object value. To check for <code>null</code> values, it is recommended to use strict equality (<code>===</code>) instead of <code>typeof</code>:</p>
+  <pre><code>
+  const value = null;
+  console.log(value === null); // Output: true
+  </code></pre>
+
+  In summary, while <code>typeof null</code> returns "object" due to a historical quirk, <code>null</code> is actually a primitive value representing the absence of any object value.</p>
+</details>
