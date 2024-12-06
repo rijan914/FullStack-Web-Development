@@ -236,3 +236,276 @@
 
   In summary, while <code>typeof null</code> returns "object" due to a historical quirk, <code>null</code> is actually a primitive value representing the absence of any object value.</p>
 </details>
+<details>
+  <summary style="color: blue;">What are the different types of operators in JavaScript?</summary>
+  <p style="color: green;">JavaScript provides a variety of operators that can be used to perform different operations on values. These operators can be categorized into several types:
+
+  <strong>1. Arithmetic Operators:</strong> Used to perform arithmetic calculations.
+  <ul>
+    <li><code>+</code> (Addition): Adds two numbers. Example: <code>5 + 3</code></li>
+    <li><code>-</code> (Subtraction): Subtracts one number from another. Example: <code>5 - 3</code></li>
+    <li><code>*</code> (Multiplication): Multiplies two numbers. Example: <code>5 * 3</code></li>
+    <li><code>/</code> (Division): Divides one number by another. Example: <code>5 / 3</code></li>
+    <li><code>%</code> (Modulus): Returns the remainder of a division. Example: <code>5 % 3</code></li>
+    <li><code>**</code> (Exponentiation): Raises the first operand to the power of the second operand. Example: <code>5 ** 3</code></li>
+  </ul>
+
+  <strong>2. Comparison Operators:</strong> Used to compare two values.
+  <ul>
+    <li><code>==</code> (Equal to): Checks if two values are equal. Example: <code>5 == '5'</code></li>
+    <li><code>===</code> (Strict equal to): Checks if two values are equal and of the same type. Example: <code>5 === 5</code></li>
+    <li><code>!=</code> (Not equal to): Checks if two values are not equal. Example: <code>5 != '5'</code></li>
+    <li><code>!==</code> (Strict not equal to): Checks if two values are not equal and not of the same type. Example: <code>5 !== '5'</code></li>
+    <li><code>></code> (Greater than): Checks if the left operand is greater than the right operand. Example: <code>5 > 3</code></li>
+    <li><code><</code> (Less than): Checks if the left operand is less than the right operand. Example: <code>5 < 3</code></li>
+    <li><code>>=</code> (Greater than or equal to): Checks if the left operand is greater than or equal to the right operand. Example: <code>5 >= 3</code></li>
+    <li><code><=</code> (Less than or equal to): Checks if the left operand is less than or equal to the right operand. Example: <code>5 <= 3</code></li>
+  </ul>
+
+  <strong>3. Logical Operators:</strong> Used to perform logical operations.
+  <ul>
+    <li><code>&&</code> (Logical AND): Returns true if both operands are true. Example: <code>true && false</code></li>
+    <li><code>||</code> (Logical OR): Returns true if at least one operand is true. Example: <code>true || false</code></li>
+    <li><code>!</code> (Logical NOT): Returns true if the operand is false. Example: <code>!true</code></li>
+  </ul>
+
+  <strong>4. Assignment Operators:</strong> Used to assign values to variables.
+  <ul>
+    <li><code>=</code> (Assignment): Assigns the value of the right operand to the left operand. Example: <code>x = 5</code></li>
+    <li><code>+=</code> (Addition assignment): Adds the right operand to the left operand and assigns the result to the left operand. Example: <code>x += 5</code></li>
+    <li><code>-=</code> (Subtraction assignment): Subtracts the right operand from the left operand and assigns the result to the left operand. Example: <code>x -= 5</code></li>
+    <li><code>*=</code> (Multiplication assignment): Multiplies the left operand by the right operand and assigns the result to the left operand. Example: <code>x *= 5</code></li>
+    <li><code>/=</code> (Division assignment): Divides the left operand by the right operand and assigns the result to the left operand. Example: <code>x /= 5</code></li>
+    <li><code>%=</code> (Modulus assignment): Takes the modulus using the two operands and assigns the result to the left operand. Example: <code>x %= 5</code></li>
+  </ul>
+
+  <strong>5. Conditional (Ternary) Operator:</strong> Used to assign a value to a variable based on a condition.
+  <ul>
+    <li><code>condition ? value1 : value2</code>: If the condition is true, the operator returns the value of <code>value1</code>; otherwise, it returns the value of <code>value2</code>. Example: <code>let result = (x > 10) ? 'Greater' : 'Smaller';</code></li>
+  </ul>
+
+  In summary, JavaScript provides a wide range of operators that allow you to perform various operations on values, making it a powerful and flexible language.</p>
+</details>
+<details>
+  <summary style="color: blue;">What are the push, pop, slice, and splice methods in JavaScript?</summary>
+  <p style="color: green;">In JavaScript, arrays come with several built-in methods that allow you to manipulate their elements. Four commonly used methods are <code>push</code>, <code>pop</code>, <code>slice</code>, and <code>splice</code>.
+
+  <strong>1. push:</strong> Adds one or more elements to the end of an array and returns the new length of the array.
+  <pre><code>
+  let arr = [1, 2, 3];
+  arr.push(4);
+  console.log(arr); // Output: [1, 2, 3, 4]
+  </code></pre>
+
+  <strong>2. pop:</strong> Removes the last element from an array and returns that element. This method changes the length of the array.
+  <pre><code>
+  let arr = [1, 2, 3];
+  let lastElement = arr.pop();
+  console.log(arr); // Output: [1, 2, 3]
+  console.log(lastElement); // Output: 3
+  </code></pre>
+
+  <strong>3. slice:</strong> Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included). The original array will not be modified.
+  <pre><code>
+  let arr = [1, 2, 3, 4, 5];
+  let slicedArr = arr.slice(1, 3);
+  console.log(slicedArr); // Output: [2, 3]
+  console.log(arr); // Output: [1, 2, 3, 4, 5]
+  </code></pre>
+
+  <strong>4. splice:</strong> Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. This method modifies the original array.
+  <pre><code>
+  let arr = [1, 2, 3, 4, 5];
+  let removedElements = arr.splice(2, 2, 'a', 'b');
+  console.log(arr); // Output: [1, 2, 'a', 'b', 5]
+  console.log(removedElements); // Output: [3, 4]
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+      <th>Modifies Original Array</th>
+      <th>Returns</th>
+    </tr>
+    <tr>
+      <td><code>push</code></td>
+      <td>Adds one or more elements to the end of an array</td>
+      <td>Yes</td>
+      <td>New length of the array</td>
+    </tr>
+    <tr>
+      <td><code>pop</code></td>
+      <td>Removes the last element from an array</td>
+      <td>Yes</td>
+      <td>The removed element</td>
+    </tr>
+    <tr>
+      <td><code>slice</code></td>
+      <td>Returns a shallow copy of a portion of an array</td>
+      <td>No</td>
+      <td>A new array containing the extracted elements</td>
+    </tr>
+    <tr>
+      <td><code>splice</code></td>
+      <td>Changes the contents of an array by removing/replacing elements</td>
+      <td>Yes</td>
+      <td>An array containing the removed elements</td>
+    </tr>
+  </table>
+
+  In summary, <code>push</code>, <code>pop</code>, <code>slice</code>, and <code>splice</code> are powerful array methods in JavaScript that allow you to manipulate arrays in various ways, each with its own specific use case.</p>
+</details>
+<details>
+  <summary style="color: blue;">What are the different types of loops in JavaScript?</summary>
+  <p style="color: green;">JavaScript provides several types of loops that allow you to execute a block of code multiple times. The main types of loops are <code>for</code>, <code>while</code>, <code>do-while</code>, <code>for-in</code>, and <code>for-of</code>.
+
+  <strong>1. for Loop:</strong> Used to execute a block of code a specific number of times.
+  <pre><code>
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  // Output: 0 1 2 3 4
+  </code></pre>
+
+  <strong>2. while Loop:</strong> Used to execute a block of code as long as a specified condition is true.
+  <pre><code>
+  let i = 0;
+  while (i < 5) {
+    console.log(i);
+    i++;
+  }
+  // Output: 0 1 2 3 4
+  </code></pre>
+
+  <strong>3. do-while Loop:</strong> Similar to the <code>while</code> loop, but it executes the block of code once before checking the condition.
+  <pre><code>
+  let i = 0;
+  do {
+    console.log(i);
+    i++;
+  } while (i < 5);
+  // Output: 0 1 2 3 4
+  </code></pre>
+
+  <strong>4. for-in Loop:</strong> Used to iterate over the enumerable properties of an object.
+  <pre><code>
+  const obj = { a: 1, b: 2, c: 3 };
+  for (let key in obj) {
+    console.log(key, obj[key]);
+  }
+  // Output: a 1
+  //         b 2
+  //         c 3
+  </code></pre>
+
+  <strong>5. for-of Loop:</strong> Used to iterate over the values of an iterable object (like an array, string, or Map).
+  <pre><code>
+  const arr = [1, 2, 3, 4, 5];
+  for (let value of arr) {
+    console.log(value);
+  }
+  // Output: 1 2 3 4 5
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Loop Type</th>
+      <th>Description</th>
+      <th>Use Case</th>
+    </tr>
+    <tr>
+      <td><code>for</code></td>
+      <td>Executes a block of code a specific number of times</td>
+      <td>When the number of iterations is known</td>
+    </tr>
+    <tr>
+      <td><code>while</code></td>
+      <td>Executes a block of code as long as a specified condition is true</td>
+      <td>When the number of iterations is not known</td>
+    </tr>
+    <tr>
+      <td><code>do-while</code></td>
+      <td>Executes a block of code once before checking the condition</td>
+      <td>When the block of code needs to be executed at least once</td>
+    </tr>
+    <tr>
+      <td><code>for-in</code></td>
+      <td>Iterates over the enumerable properties of an object</td>
+      <td>When iterating over object properties</td>
+    </tr>
+    <tr>
+      <td><code>for-of</code></td>
+      <td>Iterates over the values of an iterable object</td>
+      <td>When iterating over array or iterable values</td>
+    </tr>
+  </table>
+</p>
+</details>
+<details>
+  <summary style="color: blue;">What is the difference between for...of and for...in loops in JavaScript?</summary>
+  <p style="color: green;">In JavaScript, both <code>for...of</code> and <code>for...in</code> loops are used to iterate over elements, but they serve different purposes and work with different types of data.
+
+  <strong>for...in Loop:</strong>
+  <ul>
+    <li>Used to iterate over the enumerable properties of an object.</li>
+    <li>Iterates over the keys (property names) of an object.</li>
+    <li>Can be used with objects and arrays, but primarily intended for objects.</li>
+  </ul>
+  <pre><code>
+  const obj = { a: 1, b: 2, c: 3 };
+  for (let key in obj) {
+    console.log(key, obj[key]);
+  }
+  // Output: a 1
+  //         b 2
+  //         c 3
+  </code></pre>
+
+  <strong>for...of Loop:</strong>
+  <ul>
+    <li>Used to iterate over the values of an iterable object (like an array, string, or Map).</li>
+    <li>Iterates over the values of an iterable object.</li>
+    <li>Cannot be used with objects unless they implement the iterable protocol.</li>
+  </ul>
+  <pre><code>
+  const arr = [1, 2, 3, 4, 5];
+  for (let value of arr) {
+    console.log(value);
+  }
+  // Output: 1 2 3 4 5
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>for...in</th>
+      <th>for...of</th>
+    </tr>
+    <tr>
+      <td>Purpose</td>
+      <td>Iterates over the enumerable properties of an object</td>
+      <td>Iterates over the values of an iterable object</td>
+    </tr>
+    <tr>
+      <td>Iterates Over</td>
+      <td>Keys (property names)</td>
+      <td>Values</td>
+    </tr>
+    <tr>
+      <td>Use Case</td>
+      <td>When iterating over object properties</td>
+      <td>When iterating over array or iterable values</td>
+    </tr>
+    <tr>
+      <td>Works With</td>
+      <td>Objects and arrays (primarily objects)</td>
+      <td>Arrays, strings, Maps, Sets, and other iterables</td>
+    </tr>
+  </table>
+
+  In summary, <code>for...in</code> is used to iterate over the keys of an object, while <code>for...of</code> is used to iterate over the values of an iterable object. Understanding the differences between these loops helps you choose the right one for your specific use case.</p>
+</details>
