@@ -881,3 +881,92 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
 
   In summary, the JavaScript engine goes through parsing, compilation, execution context creation, hoisting, execution, and garbage collection to perform a function. Understanding these steps helps developers write more efficient and optimized code.</p>
 </details>
+<details>
+  <summary style="color: blue;">What are lexical scope, scope chaining, and closures in JavaScript?</summary>
+  <p style="color: green;">In JavaScript, lexical scope, scope chaining, and closures are fundamental concepts that help manage the accessibility of variables and functions.
+
+  <strong>1. Lexical Scope:</strong>
+  <p>Lexical scope, also known as static scope, refers to the scope of a variable being determined by its position within the source code. In lexical scoping, a variable defined inside a function is only accessible within that function and any nested functions.</p>
+  <pre><code>
+  function outer() {
+    let outerVar = 'I am outside!';
+    
+    function inner() {
+      console.log(outerVar); // Output: I am outside!
+    }
+    
+    inner();
+  }
+  
+  outer();
+  </code></pre>
+
+  <strong>2. Scope Chaining:</strong>
+  <p>Scope chaining refers to the process of resolving variable names in nested functions. When a variable is referenced, the JavaScript engine looks for the variable in the current scope. If it is not found, it moves up to the next outer scope, and so on, until it reaches the global scope.</p>
+  <pre><code>
+  function first() {
+    let firstVar = 'First';
+    
+    function second() {
+      let secondVar = 'Second';
+      
+      function third() {
+        let thirdVar = 'Third';
+        console.log(firstVar); // Output: First
+        console.log(secondVar); // Output: Second
+        console.log(thirdVar); // Output: Third
+      }
+      
+      third();
+    }
+    
+    second();
+  }
+  
+  first();
+  </code></pre>
+
+  <strong>3. Closures:</strong>
+  <p>A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope. Closures are created whenever a function is defined inside another function, allowing the inner function to access the outer function's variables.</p>
+  <pre><code>
+  function makeCounter() {
+    let count = 0;
+    
+    return function() {
+      count++;
+      return count;
+    };
+  }
+  
+  const counter = makeCounter();
+  console.log(counter()); // Output: 1
+  console.log(counter()); // Output: 2
+  console.log(counter()); // Output: 3
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Lexical Scope</td>
+      <td>Scope determined by the position in the source code</td>
+      <td><pre><code>function outer() { ... }</code></pre></td>
+    </tr>
+    <tr>
+      <td>Scope Chaining</td>
+      <td>Process of resolving variable names in nested functions</td>
+      <td><pre><code>function first() { ... }</code></pre></td>
+    </tr>
+    <tr>
+      <td>Closures</td>
+      <td>Function retaining access to its lexical scope</td>
+      <td><pre><code>function makeCounter() { ... }</code></pre></td>
+    </tr>
+  </table>
+
+  In summary, lexical scope determines the scope of variables based on their position in the code, scope chaining resolves variable names in nested functions, and closures allow functions to retain access to their lexical scope even when executed outside that scope. Understanding these concepts is crucial for writing effective and efficient JavaScript code.</p>
+</details>
