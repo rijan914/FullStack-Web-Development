@@ -63,11 +63,12 @@
 // ];
 // const store=count.filter((val)=> val.includes("land"))
 // console.log(store);
-// //reduce
-// const num1=[1,2,3]
-// const sum = num1.reduce((acc,curr)=>acc+curr,0);
-// console.log(sum);
-//accumulator is cr
+
+//reduce
+const num1=[1,2,3]
+const sum = num1.reduce((acc,curr)=>acc+curr,0);
+console.log(sum);
+// accumulator is cr
 // current is like who goes to collect the choclate wrappers
 
 //sort
@@ -105,18 +106,18 @@
 // spread breaking the array  and divide into single chunk of data
 // rest making the array
 
-//rest
-function sum(...args) {
-  //rest op
-  console.log(args);
-  let sum = 0;
-  for (const x of args) {
-    sum = sum + x;
-  }
-  return sum;
-}
-console.log(sum(1, 2, 3, 4, 5, 56, 67, 23));
+// //rest
+// function sum(...args) {
+//   //rest op
+//   console.log(args);
+//   let sum = 0;
+//   for (const x of args) {
+//     sum = sum + x;
+//   }
+//   return sum;
+// }
+// console.log(sum(1, 2, 3, 4, 5, 56, 67, 23));
 
-//find
-//every
-//some
+// //find
+// //every
+// //some

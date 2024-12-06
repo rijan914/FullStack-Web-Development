@@ -752,9 +752,11 @@ console.log("Hello!");
 </code></pre>
 
 In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+
 <p style="color: green;">In JavaScript, hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code.
 
 <strong>Variable Hoisting:</strong>
+
 <ul>
   <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope and initialized with <code>undefined</code>.</li>
   <li>Variables declared with <code>let</code> and <code>const</code> are also hoisted to the top of their block scope, but they are not initialized. Accessing them before the declaration results in a ReferenceError.</li>
@@ -772,6 +774,7 @@ console.log(b); // Output: 20
 </code></pre>
 
 <strong>Function Hoisting:</strong>
+
 <ul>
   <li>Function declarations are hoisted to the top of their containing scope, allowing you to call the function before its declaration.</li>
   <li>Function expressions are not hoisted. If you try to call a function expression before it is defined, you will get a TypeError.</li>
@@ -786,14 +789,16 @@ function greet() {
 // Function expression
 sayHello(); // TypeError: sayHello is not a function
 var sayHello = function() {
-  console.log("Hello!");
+console.log("Hello!");
 };
 </code></pre>
 
 In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+
 <p style="color: green;">In JavaScript, hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code.
 
 <strong>Variable Hoisting:</strong>
+
 <ul>
   <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope and initialized with <code>undefined</code>.</li>
   <li>Variables declared with <code>let</code> and <code>const</code> are also hoisted to the top of their block scope, but they are not initialized. Accessing them before the declaration results in a ReferenceError.</li>
@@ -811,6 +816,7 @@ console.log(b); // Output: 20
 </code></pre>
 
 <strong>Function Hoisting:</strong>
+
 <ul>
   <li>Function declarations are hoisted to the top of their containing scope, allowing you to call the function before its declaration.</li>
   <li>Function expressions are not hoisted. If you try to call a function expression before it is defined, you will get a TypeError.</li>
@@ -825,11 +831,12 @@ function greet() {
 // Function expression
 sayHello(); // TypeError: sayHello is not a function
 var sayHello = function() {
-  console.log("Hello!");
+console.log("Hello!");
 };
 </code></pre>
 
 <strong>Additional Points:</strong>
+
 <ul>
   <li><strong>For functions:</strong> Being able to use a variable's value in its scope before the line it is declared. ("Value hoisting")</li>
   <li><strong>For var:</strong> Being able to reference a variable in its scope before the line it is declared, without throwing a ReferenceError, but the value is always undefined. ("Declaration hoisting")</li>
@@ -837,29 +844,37 @@ var sayHello = function() {
 </ul>
 
 In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+
 <details>
   <summary style="color: blue;">How does the JavaScript engine work while performing a function?</summary>
   <p style="color: green;">When the JavaScript engine executes a function, it goes through several steps to ensure the function runs correctly. Here is an overview of how the JavaScript engine works while performing a function:
 
-  <strong>1. Parsing:</strong>
+<strong>1. Parsing:</strong>
+
   <p>The JavaScript engine first parses the code to understand its structure and syntax. During this phase, it converts the code into an Abstract Syntax Tree (AST), which represents the hierarchical structure of the code.</p>
 
-  <strong>2. Compilation:</strong>
+<strong>2. Compilation:</strong>
+
   <p>After parsing, the JavaScript engine compiles the AST into bytecode or machine code. Modern JavaScript engines, like Google's V8, use Just-In-Time (JIT) compilation to optimize the code during execution.</p>
 
-  <strong>3. Execution Context Creation:</strong>
+<strong>3. Execution Context Creation:</strong>
+
   <p>When a function is called, the JavaScript engine creates an execution context for that function. The execution context contains information about the function's scope, including variables, arguments, and the <code>this</code> keyword.</p>
 
-  <strong>4. Hoisting:</strong>
+<strong>4. Hoisting:</strong>
+
   <p>During the creation phase of the execution context, the JavaScript engine hoists variable and function declarations to the top of their scope. This means that variables declared with <code>var</code> are initialized with <code>undefined</code>, while <code>let</code> and <code>const</code> declarations are not initialized until their actual declaration is encountered.</p>
 
-  <strong>5. Execution:</strong>
+<strong>5. Execution:</strong>
+
   <p>After setting up the execution context and hoisting declarations, the JavaScript engine begins executing the function's code line by line. It evaluates expressions, executes statements, and calls other functions as needed.</p>
 
-  <strong>6. Garbage Collection:</strong>
+<strong>6. Garbage Collection:</strong>
+
   <p>Once the function has finished executing, the JavaScript engine performs garbage collection to free up memory that is no longer needed. This includes cleaning up variables and objects that are no longer referenced.</p>
 
-  <strong>Example:</strong>
+<strong>Example:</strong>
+
   <pre><code>
   function example(a, b) {
     var sum = a + b;
@@ -869,7 +884,8 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
   console.log(example(5, 3)); // Output: 8
   </code></pre>
 
-  <strong>Steps in Detail:</strong>
+<strong>Steps in Detail:</strong>
+
   <ul>
     <li><strong>Parsing:</strong> The engine parses the <code>example</code> function and converts it into an AST.</li>
     <li><strong>Compilation:</strong> The AST is compiled into bytecode or machine code.</li>
@@ -879,13 +895,15 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
     <li><strong>Garbage Collection:</strong> After the function execution is complete, the engine performs garbage collection to free up memory.</li>
   </ul>
 
-  In summary, the JavaScript engine goes through parsing, compilation, execution context creation, hoisting, execution, and garbage collection to perform a function. Understanding these steps helps developers write more efficient and optimized code.</p>
+In summary, the JavaScript engine goes through parsing, compilation, execution context creation, hoisting, execution, and garbage collection to perform a function. Understanding these steps helps developers write more efficient and optimized code.</p>
+
 </details>
 <details>
   <summary style="color: blue;">What are lexical scope, scope chaining, and closures in JavaScript?</summary>
   <p style="color: green;">In JavaScript, lexical scope, scope chaining, and closures are fundamental concepts that help manage the accessibility of variables and functions.
 
-  <strong>1. Lexical Scope:</strong>
+<strong>1. Lexical Scope:</strong>
+
   <p>Lexical scope, also known as static scope, refers to the scope of a variable being determined by its position within the source code. In lexical scoping, a variable defined inside a function is only accessible within that function and any nested functions.</p>
   <pre><code>
   function outer() {
@@ -901,7 +919,8 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
   outer();
   </code></pre>
 
-  <strong>2. Scope Chaining:</strong>
+<strong>2. Scope Chaining:</strong>
+
   <p>Scope chaining refers to the process of resolving variable names in nested functions. When a variable is referenced, the JavaScript engine looks for the variable in the current scope. If it is not found, it moves up to the next outer scope, and so on, until it reaches the global scope.</p>
   <pre><code>
   function first() {
@@ -926,7 +945,8 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
   first();
   </code></pre>
 
-  <strong>3. Closures:</strong>
+<strong>3. Closures:</strong>
+
   <p>A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope. Closures are created whenever a function is defined inside another function, allowing the inner function to access the outer function's variables.</p>
   <pre><code>
   function makeCounter() {
@@ -944,7 +964,8 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
   console.log(counter()); // Output: 3
   </code></pre>
 
-  <strong>Comparison Table:</strong>
+<strong>Comparison Table:</strong>
+
   <table>
     <tr>
       <th>Concept</th>
@@ -968,5 +989,186 @@ In summary, hoisting in JavaScript allows you to use variables and functions bef
     </tr>
   </table>
 
-  In summary, lexical scope determines the scope of variables based on their position in the code, scope chaining resolves variable names in nested functions, and closures allow functions to retain access to their lexical scope even when executed outside that scope. Understanding these concepts is crucial for writing effective and efficient JavaScript code.</p>
+In summary, lexical scope determines the scope of variables based on their position in the code, scope chaining resolves variable names in nested functions, and closures allow functions to retain access to their lexical scope even when executed outside that scope. Understanding these concepts is crucial for writing effective and efficient JavaScript code.</p>
+
+</details>
+<details>
+  <summary style="color: blue;">What are Higher-Order Functions (HOF) and callbacks in JavaScript?</summary>
+  <p style="color: green;">In JavaScript, Higher-Order Functions (HOF) and callbacks are powerful concepts that allow for more flexible and reusable code.
+
+  <strong>1. Higher-Order Functions (HOF):</strong>
+  <p>A Higher-Order Function is a function that either takes one or more functions as arguments, returns a function, or both. HOFs allow for more abstract and reusable code by enabling functions to be passed around as values.</p>
+  <pre><code>
+  // Example of a Higher-Order Function
+  function higherOrderFunction(callback) {
+    const message = "Hello, World!";
+    callback(message);
+  }
+
+  function printMessage(msg) {
+    console.log(msg);
+  }
+
+  higherOrderFunction(printMessage); // Output: Hello, World!
+  </code></pre>
+
+  <strong>2. Callbacks:</strong>
+  <p>A callback is a function that is passed as an argument to another function and is executed after some operation has been completed. Callbacks are commonly used for asynchronous operations, such as handling events or making API requests.</p>
+  <pre><code>
+  // Example of a Callback Function
+  function fetchData(callback) {
+    setTimeout(() => {
+      const data = { name: "John", age: 30 };
+      callback(data);
+    }, 2000);
+  }
+
+  function handleData(data) {
+    console.log("Data received:", data);
+  }
+
+  fetchData(handleData); // Output after 2 seconds: Data received: { name: "John", age: 30 }
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Concept</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Higher-Order Function (HOF)</td>
+      <td>A function that takes one or more functions as arguments, returns a function, or both</td>
+      <td><pre><code>function higherOrderFunction(callback) { ... }</code></pre></td>
+    </tr>
+    <tr>
+      <td>Callback</td>
+      <td>A function passed as an argument to another function and executed after some operation</td>
+      <td><pre><code>function fetchData(callback) { ... }</code></pre></td>
+    </tr>
+  </table>
+
+  In summary, Higher-Order Functions (HOF) and callbacks are essential concepts in JavaScript that enable more flexible and reusable code. HOFs allow functions to be passed around as values, while callbacks are used to handle asynchronous operations and events.</p>
+</details>
+<details>
+  <summary style="color: blue;">What is the map method in JavaScript?</summary>
+  <p style="color: green;">The <code>map</code> method in JavaScript is an array method that creates a new array populated with the results of calling a provided function on every element in the calling array. It is commonly used for transforming or processing array elements.
+
+  <strong>Syntax:</strong>
+  <pre><code>
+  array.map(function(currentValue, index, array) {
+    // Return element for new array
+  });
+  </code></pre>
+
+  <strong>Parameters:</strong>
+  <ul>
+    <li><code>currentValue</code>: The current element being processed in the array.</li>
+    <li><code>index</code> (optional): The index of the current element being processed in the array.</li>
+    <li><code>array</code> (optional): The array <code>map</code> was called upon.</li>
+  </ul>
+
+  <strong>Example:</strong>
+  <pre><code>
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(function(num) {
+    return num * 2;
+  });
+  console.log(doubled); // Output: [2, 4, 6, 8, 10]
+  </code></pre>
+
+  <strong>Arrow Function Example:</strong>
+  <pre><code>
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(num => num * 2);
+  console.log(doubled); // Output: [2, 4, 6, 8, 10]
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Transformation</td>
+      <td>Transforms each element in the array</td>
+      <td><pre><code>array.map(num => num * 2)</code></pre></td>
+    </tr>
+    <tr>
+      <td>Returns</td>
+      <td>New array with transformed elements</td>
+      <td><pre><code>[2, 4, 6, 8, 10]</code></pre></td>
+    </tr>
+    <tr>
+      <td>Original Array</td>
+      <td>Does not modify the original array</td>
+      <td><pre><code>[1, 2, 3, 4, 5]</code></pre></td>
+    </tr>
+  </table>
+
+  In summary, the <code>map</code> method in JavaScript is a powerful tool for transforming arrays by applying a function to each element and returning a new array with the transformed elements. It is commonly used for data processing and manipulation.</p>
+</details>
+
+<details>
+  <summary style="color: blue;">What is the filter method in JavaScript?</summary>
+  <p style="color: green;">The <code>filter</code> method in JavaScript is an array method that creates a new array with all elements that pass the test implemented by the provided function. It is commonly used to filter out elements from an array based on certain criteria.
+
+  <strong>Syntax:</strong>
+  <pre><code>
+  array.filter(function(element, index, array) {
+    // Return true to keep the element, false otherwise
+  });
+  </code></pre>
+
+  <strong>Parameters:</strong>
+  <ul>
+    <li><code>element</code>: The current element being processed in the array.</li>
+    <li><code>index</code> (optional): The index of the current element being processed in the array.</li>
+    <li><code>array</code> (optional): The array <code>filter</code> was called upon.</li>
+  </ul>
+
+  <strong>Example:</strong>
+  <pre><code>
+  const numbers = [1, 2, 3, 4, 5];
+  const evenNumbers = numbers.filter(function(num) {
+    return num % 2 === 0;
+  });
+  console.log(evenNumbers); // Output: [2, 4]
+  </code></pre>
+
+  <strong>Arrow Function Example:</strong>
+  <pre><code>
+  const numbers = [1, 2, 3, 4, 5];
+  const evenNumbers = numbers.filter(num => num % 2 === 0);
+  console.log(evenNumbers); // Output: [2, 4]
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>Filtering</td>
+      <td>Filters elements based on a condition</td>
+      <td><pre><code>array.filter(num => num % 2 === 0)</code></pre></td>
+    </tr>
+    <tr>
+      <td>Returns</td>
+      <td>New array with filtered elements</td>
+      <td><pre><code>[2, 4]</code></pre></td>
+    </tr>
+    <tr>
+      <td>Original Array</td>
+      <td>Does not modify the original array</td>
+      <td><pre><code>[1, 2, 3, 4, 5]</code></pre></td>
+    </tr>
+  </table>
+
+  In summary, the <code>filter</code> method in JavaScript is a powerful tool for creating a new array with elements that meet certain criteria. It is commonly used for data processing and manipulation, allowing you to easily filter out unwanted elements from an array.</p>
 </details>
