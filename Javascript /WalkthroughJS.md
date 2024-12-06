@@ -647,6 +647,7 @@ In summary, JavaScript provides various types of functions to suit different pro
 <p style="color: green;">In JavaScript, an object method is a function that is a property of an object. Methods are used to perform actions on the object and can access and modify the object's properties.
 
 <strong>Example of an Object with Methods:</strong>
+
 <pre><code>
 const person = {
   firstName: "John",
@@ -664,6 +665,7 @@ person.greet(); // Output: Hello, John
 </code></pre>
 
 <strong>Key Points about Object Methods:</strong>
+
 <ul>
   <li>Methods are functions stored as object properties.</li>
   <li>Methods can access and modify the object's properties using the <code>this</code> keyword.</li>
@@ -671,6 +673,7 @@ person.greet(); // Output: Hello, John
 </ul>
 
 <strong>Adding Methods to an Object:</strong>
+
 <pre><code>
 const car = {
   brand: "Toyota",
@@ -685,9 +688,11 @@ car.start(); // Output: Toyota Corolla is starting.
 </code></pre>
 
 <strong>Using the <code>this</code> Keyword:</strong>
+
 <p>The <code>this</code> keyword refers to the object from which the method was called. It allows methods to access and modify the object's properties.</p>
 
 <strong>Example:</strong>
+
 <pre><code>
 const book = {
   title: "JavaScript: The Good Parts",
@@ -701,3 +706,178 @@ console.log(book.getDetails()); // Output: JavaScript: The Good Parts by Douglas
 </code></pre>
 
 In summary, object methods in JavaScript are functions that are properties of objects. They allow objects to perform actions and interact with their own properties using the <code>this</code> keyword.</p>
+
+<details>
+Var goes to global scope and Let and const goes to script or local scope.
+</details>
+
+<p style="color: green;">In JavaScript, hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code.
+
+<strong>Variable Hoisting:</strong>
+
+<ul>
+  <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope and initialized with <code>undefined</code>.</li>
+  <li>Variables declared with <code>let</code> and <code>const</code> are also hoisted to the top of their block scope, but they are not initialized. Accessing them before the declaration results in a ReferenceError.</li>
+</ul>
+<pre><code>
+// Example with var
+console.log(a); // Output: undefined
+var a = 10;
+console.log(a); // Output: 10
+
+// Example with let
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 20;
+console.log(b); // Output: 20
+</code></pre>
+
+<strong>Function Hoisting:</strong>
+
+<ul>
+  <li>Function declarations are hoisted to the top of their containing scope, allowing you to call the function before its declaration.</li>
+  <li>Function expressions are not hoisted. If you try to call a function expression before it is defined, you will get a TypeError.</li>
+</ul>
+<pre><code>
+// Function declaration
+greet(); // Output: Hello, World!
+function greet() {
+  console.log("Hello, World!");
+}
+
+// Function expression
+sayHello(); // TypeError: sayHello is not a function
+var sayHello = function() {
+console.log("Hello!");
+};
+</code></pre>
+
+In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+<p style="color: green;">In JavaScript, hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code.
+
+<strong>Variable Hoisting:</strong>
+<ul>
+  <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope and initialized with <code>undefined</code>.</li>
+  <li>Variables declared with <code>let</code> and <code>const</code> are also hoisted to the top of their block scope, but they are not initialized. Accessing them before the declaration results in a ReferenceError.</li>
+</ul>
+<pre><code>
+// Example with var
+console.log(a); // Output: undefined
+var a = 10;
+console.log(a); // Output: 10
+
+// Example with let
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 20;
+console.log(b); // Output: 20
+</code></pre>
+
+<strong>Function Hoisting:</strong>
+<ul>
+  <li>Function declarations are hoisted to the top of their containing scope, allowing you to call the function before its declaration.</li>
+  <li>Function expressions are not hoisted. If you try to call a function expression before it is defined, you will get a TypeError.</li>
+</ul>
+<pre><code>
+// Function declaration
+greet(); // Output: Hello, World!
+function greet() {
+  console.log("Hello, World!");
+}
+
+// Function expression
+sayHello(); // TypeError: sayHello is not a function
+var sayHello = function() {
+  console.log("Hello!");
+};
+</code></pre>
+
+In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+<p style="color: green;">In JavaScript, hoisting is a behavior in which variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code.
+
+<strong>Variable Hoisting:</strong>
+<ul>
+  <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope and initialized with <code>undefined</code>.</li>
+  <li>Variables declared with <code>let</code> and <code>const</code> are also hoisted to the top of their block scope, but they are not initialized. Accessing them before the declaration results in a ReferenceError.</li>
+</ul>
+<pre><code>
+// Example with var
+console.log(a); // Output: undefined
+var a = 10;
+console.log(a); // Output: 10
+
+// Example with let
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 20;
+console.log(b); // Output: 20
+</code></pre>
+
+<strong>Function Hoisting:</strong>
+<ul>
+  <li>Function declarations are hoisted to the top of their containing scope, allowing you to call the function before its declaration.</li>
+  <li>Function expressions are not hoisted. If you try to call a function expression before it is defined, you will get a TypeError.</li>
+</ul>
+<pre><code>
+// Function declaration
+greet(); // Output: Hello, World!
+function greet() {
+  console.log("Hello, World!");
+}
+
+// Function expression
+sayHello(); // TypeError: sayHello is not a function
+var sayHello = function() {
+  console.log("Hello!");
+};
+</code></pre>
+
+<strong>Additional Points:</strong>
+<ul>
+  <li><strong>For functions:</strong> Being able to use a variable's value in its scope before the line it is declared. ("Value hoisting")</li>
+  <li><strong>For var:</strong> Being able to reference a variable in its scope before the line it is declared, without throwing a ReferenceError, but the value is always undefined. ("Declaration hoisting")</li>
+  <li><strong>For let, const, and class:</strong> The declaration of the variable causes behavior changes in its scope before the line in which it is declared.</li>
+</ul>
+
+In summary, hoisting in JavaScript allows you to use variables and functions before they are declared, but the behavior differs between <code>var</code>, <code>let</code>, <code>const</code>, and function expressions. Understanding hoisting helps you write more predictable and bug-free code.</p>
+<details>
+  <summary style="color: blue;">How does the JavaScript engine work while performing a function?</summary>
+  <p style="color: green;">When the JavaScript engine executes a function, it goes through several steps to ensure the function runs correctly. Here is an overview of how the JavaScript engine works while performing a function:
+
+  <strong>1. Parsing:</strong>
+  <p>The JavaScript engine first parses the code to understand its structure and syntax. During this phase, it converts the code into an Abstract Syntax Tree (AST), which represents the hierarchical structure of the code.</p>
+
+  <strong>2. Compilation:</strong>
+  <p>After parsing, the JavaScript engine compiles the AST into bytecode or machine code. Modern JavaScript engines, like Google's V8, use Just-In-Time (JIT) compilation to optimize the code during execution.</p>
+
+  <strong>3. Execution Context Creation:</strong>
+  <p>When a function is called, the JavaScript engine creates an execution context for that function. The execution context contains information about the function's scope, including variables, arguments, and the <code>this</code> keyword.</p>
+
+  <strong>4. Hoisting:</strong>
+  <p>During the creation phase of the execution context, the JavaScript engine hoists variable and function declarations to the top of their scope. This means that variables declared with <code>var</code> are initialized with <code>undefined</code>, while <code>let</code> and <code>const</code> declarations are not initialized until their actual declaration is encountered.</p>
+
+  <strong>5. Execution:</strong>
+  <p>After setting up the execution context and hoisting declarations, the JavaScript engine begins executing the function's code line by line. It evaluates expressions, executes statements, and calls other functions as needed.</p>
+
+  <strong>6. Garbage Collection:</strong>
+  <p>Once the function has finished executing, the JavaScript engine performs garbage collection to free up memory that is no longer needed. This includes cleaning up variables and objects that are no longer referenced.</p>
+
+  <strong>Example:</strong>
+  <pre><code>
+  function example(a, b) {
+    var sum = a + b;
+    return sum;
+  }
+
+  console.log(example(5, 3)); // Output: 8
+  </code></pre>
+
+  <strong>Steps in Detail:</strong>
+  <ul>
+    <li><strong>Parsing:</strong> The engine parses the <code>example</code> function and converts it into an AST.</li>
+    <li><strong>Compilation:</strong> The AST is compiled into bytecode or machine code.</li>
+    <li><strong>Execution Context Creation:</strong> When <code>example(5, 3)</code> is called, an execution context is created with <code>a</code> and <code>b</code> set to 5 and 3, respectively.</li>
+    <li><strong>Hoisting:</strong> The <code>var sum</code> declaration is hoisted to the top of the function scope and initialized with <code>undefined</code>.</li>
+    <li><strong>Execution:</strong> The engine executes the code, calculates <code>a + b</code>, assigns the result to <code>sum</code>, and returns <code>sum</code>.</li>
+    <li><strong>Garbage Collection:</strong> After the function execution is complete, the engine performs garbage collection to free up memory.</li>
+  </ul>
+
+  In summary, the JavaScript engine goes through parsing, compilation, execution context creation, hoisting, execution, and garbage collection to perform a function. Understanding these steps helps developers write more efficient and optimized code.</p>
+</details>
