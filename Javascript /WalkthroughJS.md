@@ -1172,3 +1172,4 @@ In summary, lexical scope determines the scope of variables based on their posit
 
   In summary, the <code>filter</code> method in JavaScript is a powerful tool for creating a new array with elements that meet certain criteria. It is commonly used for data processing and manipulation, allowing you to easily filter out unwanted elements from an array.</p>
 </details>
+
