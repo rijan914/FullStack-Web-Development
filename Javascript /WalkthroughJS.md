@@ -1173,3 +1173,89 @@ In summary, lexical scope determines the scope of variables based on their posit
   In summary, the <code>filter</code> method in JavaScript is a powerful tool for creating a new array with elements that meet certain criteria. It is commonly used for data processing and manipulation, allowing you to easily filter out unwanted elements from an array.</p>
 </details>
 
+
+<details>
+  <summary style="color: blue;">What is a Promise in JavaScript?</summary>
+  <p style="color: green;">A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner and more manageable way to handle asynchronous operations compared to traditional callback-based approaches.
+
+  <strong>States of a Promise:</strong>
+  <ul>
+    <li><code>pending</code>: The initial state, neither fulfilled nor rejected.</li>
+    <li><code>fulfilled</code>: The operation completed successfully, and the promise has a resulting value.</li>
+    <li><code>rejected</code>: The operation failed, and the promise has a reason for the failure.</li>
+  </ul>
+
+  <strong>Creating a Promise:</strong>
+  <pre><code>
+  const myPromise = new Promise((resolve, reject) => {
+    // Asynchronous operation
+    let success = true;
+    if (success) {
+      resolve("Operation was successful!");
+    } else {
+      reject("Operation failed.");
+    }
+  });
+  </code></pre>
+
+  <strong>Handling a Promise:</strong>
+  <p>Promises can be handled using the <code>then</code>, <code>catch</code>, and <code>finally</code> methods.</p>
+  <pre><code>
+  myPromise
+    .then(result => {
+      console.log(result); // Output: Operation was successful!
+    })
+    .catch(error => {
+      console.error(error); // Output: Operation failed.
+    })
+    .finally(() => {
+      console.log("Promise handling complete.");
+    });
+  </code></pre>
+
+  <strong>Example of a Promise:</strong>
+  <pre><code>
+  function fetchData() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const data = { name: "John", age: 30 };
+        resolve(data);
+      }, 2000);
+    });
+  }
+
+  fetchData()
+    .then(data => {
+      console.log("Data received:", data); // Output after 2 seconds: Data received: { name: "John", age: 30 }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
+  </code></pre>
+
+  <strong>Comparison Table:</strong>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>States</td>
+      <td>pending, fulfilled, rejected</td>
+      <td><pre><code>new Promise((resolve, reject) => { ... })</code></pre></td>
+    </tr>
+    <tr>
+      <td>Handling</td>
+      <td>then, catch, finally</td>
+      <td><pre><code>promise.then(...).catch(...).finally(...)</code></pre></td>
+    </tr>
+    <tr>
+      <td>Use Case</td>
+      <td>Asynchronous operations</td>
+      <td><pre><code>fetchData().then(...)</code></pre></td>
+    </tr>
+  </table>
+
+  In summary, a Promise in JavaScript is a powerful tool for managing asynchronous operations. It provides a more readable and maintainable way to handle asynchronous code compared to traditional callbacks, making it easier to work with complex asynchronous workflows.</p>
+</details>
