@@ -1,0 +1,51 @@
+/* css */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Optional: Add a background color for better visibility */
+}
+
+/* designing the weather app container */
+.container {
+    width: 600px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px; /* Add padding for more space inside the container */
+    background-color: #fff; /* Optional: Add a background color for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+    gap: 20px; /* Add gap between rows */
+}
+
+.detailsRow, .weatherDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between cards in the row */
+}
+
+.card {
+    flex: 1;
+    padding: 10px; /* Add padding for more space inside each card */
+    border-radius: 4px; /* Add rounded corners for each card */
+}
+
+.card p {
+    margin: 0;
+    text-align: center;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+}
