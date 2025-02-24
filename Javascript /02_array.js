@@ -32,9 +32,9 @@
 // console.log(arr1.concat(arr2))
 
 //fill
-// let arr4 = [1,2,23,43,3245,24,42];
-// arr4.fill('anurag',2,5);
-// console.log(arr4);
+let arr4 = [1,2,23,43,3245,24,42];
+arr4.fill('anurag',2,5);
+console.log("arr4",arr4);
 
 //include
 // check an item in the index

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../Web development/newmorphism"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "fsjs2.0"
+	}
+}
