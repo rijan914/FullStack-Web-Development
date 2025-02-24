@@ -1,0 +1,68 @@
+.card{
+border:1px solid rgb(163, 161, 161);
+border-radius: 10px;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.0.1);
+padding: 20px;
+margin: 20px;
+text-align: center  ;
+max-width: 250px;
+display: inline-block;
+
+
+
+}
+
+.card .card-image{
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px; ;
+}
+.card .card-title{
+  font-family: arial,sans-serif;
+  margin: 0;
+  color: rgb(43, 43, 43);
+  
+}
+.card .card-text{
+  font-family: arial,sans-serif;
+  color:rgb(75, 74, 74)
+}
+
+.button{
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+}
+
+.student{
+  font-family: Arial,sans-serif;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 50%,0.8);
+  
+}
+.student p{
+  margin: 0;
+}
+
+
+.welcome-message{
+  font-style: 2.5em;
+  background-color: hsl(120, 100%, 42%);
+  padding: 10px;
+  color: white;
+  border-radius:5px ;
+  margin: 0;
+}
+.login-prompt{
+  background-color: hsl(0, 100%, 42%);
+  padding: 10px;
+  color: white;
+  border-radius:5px ;
+  margin: 0;
+}
