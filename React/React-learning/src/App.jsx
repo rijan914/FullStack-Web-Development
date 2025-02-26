@@ -5,8 +5,12 @@ import Student from './Student.jsx'
 import UserGreeting from './UserGreeting.jsx'  
 import List from './List.jsx' 
 import Button1 from './Button1.jsx'
-
+import ProfilePicture from './ProfilePicture.jsx'
+import MyComponent from './MyComponent.jsx' 
+import Counter from './Counter.jsx'
 function App() {
+
+
   
   const fruits = [
     { id: 1, name: 'apple', calories: 100 },
@@ -24,6 +28,12 @@ function App() {
   ]
   return(
     <>
+    <h2>Counter App</h2>
+    <Counter/>
+    <h2>React hook</h2>
+    <MyComponent/>
+    <h1>Photo</h1>
+    <ProfilePicture/>
     <h2>Click event</h2>
     <Button1/>
 
