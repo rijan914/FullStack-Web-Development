@@ -11,7 +11,8 @@ import Counter from './Counter.jsx'
 import MyComp from './MyComp.jsx'
 import UpdaterFunction from './updaterFunction.jsx'
 import UpdateStates from './UpdateStates';
-
+import UpdateStateOfArray from './UpdateStateOfArray.jsx'
+import UpdateArrayofObjects from './UpdateArrayofObjects.jsx'
 function App() {
 
 
@@ -33,6 +34,11 @@ function App() {
   ]
   return(
     <>
+    <h1>update array of objects in state</h1>
+    <UpdateArrayofObjects/>
+    <h1>Update array in state</h1>
+    <UpdateStateOfArray/>
+
     <h1>update state</h1>
     <UpdateStates/>
     <h1>updater function</h1>
