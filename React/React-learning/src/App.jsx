@@ -9,6 +9,9 @@ import ProfilePicture from './ProfilePicture.jsx'
 import MyComponent from './MyComponent.jsx' 
 import Counter from './Counter.jsx'
 import MyComp from './MyComp.jsx'
+import UpdaterFunction from './updaterFunction.jsx'
+import UpdateStates from './UpdateStates';
+
 function App() {
 
 
@@ -30,6 +33,10 @@ function App() {
   ]
   return(
     <>
+    <h1>update state</h1>
+    <UpdateStates/>
+    <h1>updater function</h1>
+    <UpdaterFunction/>
     <h1>onChange </h1>
     <MyComp/>
     <h2>Counter App</h2>
