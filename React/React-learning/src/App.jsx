@@ -8,7 +8,9 @@ import Button1 from './Button1.jsx'
 import ProfilePicture from './ProfilePicture.jsx'
 import MyComponent from './MyComponent.jsx' 
 import Counter from './Counter.jsx'
+import MyComp from './MyComp.jsx'
 function App() {
+
 
 
   
@@ -28,6 +30,8 @@ function App() {
   ]
   return(
     <>
+    <h1>onChange </h1>
+    <MyComp/>
     <h2>Counter App</h2>
     <Counter/>
     <h2>React hook</h2>
