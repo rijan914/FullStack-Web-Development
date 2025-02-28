@@ -13,6 +13,9 @@ import UpdaterFunction from './updaterFunction.jsx'
 import UpdateStates from './UpdateStates';
 import UpdateStateOfArray from './UpdateStateOfArray.jsx'
 import UpdateArrayofObjects from './UpdateArrayofObjects.jsx'
+import Effecting from './Effecting.jsx' 
+import Effn from './Effn.jsx'
+
 function App() {
 
 
@@ -34,6 +37,13 @@ function App() {
   ]
   return(
     <>
+
+
+
+
+    <h1>useEffect</h1>
+    <Effn/>
+    <Effecting/>
     <h1>update array of objects in state</h1>
     <UpdateArrayofObjects/>
     <h1>Update array in state</h1>
