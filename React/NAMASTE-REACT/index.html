@@ -6,6 +6,23 @@
     <title>Namaste React</title>
 </head>
 <body>
+    <div id="header"><H1>
+        HEADER
+
+    </H1></div>
     
+    <div id="root">
+
+    </div>
 </body>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<script>
+    const heading = React.createElement("h1", {}, "Hello React");
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+// passing a react element inside the root
+// object 
+    root.render(heading);
+</script>
 </html>
